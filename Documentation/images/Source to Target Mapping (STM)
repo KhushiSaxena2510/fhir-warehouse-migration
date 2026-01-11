@@ -1,14 +1,2 @@
 This document defines the logical mapping between legacy RMHC source data elements and their corresponding FHIR resource attributes.
 
-## Source to Target Mapping (STM)
-
-### Patient – Source to Target Mapping
-| Source Column | Source Description | FHIR Resource | FHIR Element | Transformation Logic |
-|--------------|-------------------|--------------|--------------|----------------------|
-| patient_id | Unique ID | Patient | identifier.value | Direct mapping |
-| gender | M/F | Patient | gender | ConceptMap |
-
-### Observation – Source to Target Mapping
-| Source Column | Source Description | FHIR Resource | FHIR Element | Transformation Logic |
-|--------------|-------------------|--------------|--------------|----------------------|
-| observation_value | Measurement | Observation | value[x] | Type conversion |
