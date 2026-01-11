@@ -1,2 +1,8 @@
 This document defines the logical mapping between legacy RMHC source data elements and their corresponding FHIR resource attributes.
+## Architecture Diagram
+
+The following diagram illustrates the overall architecture of the FHIR-based warehouse implementation. It shows how legacy data flows through the translator, becomes validated FHIR resources, and is stored in a persistent FHIR server with governance via Rulebook profiling and ConceptMap translations.
+
+![Architecture Diagram](images/architecture-diagram.png)
+
 
