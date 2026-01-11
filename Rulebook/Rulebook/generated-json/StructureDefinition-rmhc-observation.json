@@ -1,0 +1,21 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "rmhc-observation",
+  "url": "http://example.org/fhir/StructureDefinition/rmhc-observation",
+  "name": "RMHCObservation",
+  "status": "active",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Observation",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Observation",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      { "id": "Observation.status", "min": 1 },
+      { "id": "Observation.code", "min": 1 },
+      { "id": "Observation.subject", "min": 1 },
+      { "id": "Observation.effective[x]", "min": 1 },
+      { "id": "Observation.value[x]", "min": 1 }
+    ]
+  }
+}
