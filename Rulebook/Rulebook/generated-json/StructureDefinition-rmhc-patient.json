@@ -1,0 +1,21 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "rmhc-patient",
+  "url": "http://example.org/fhir/StructureDefinition/rmhc-patient",
+  "name": "RMHCPatient",
+  "status": "active",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Patient",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Patient",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      { "id": "Patient.identifier", "min": 1 },
+      { "id": "Patient.name", "min": 1 },
+      { "id": "Patient.gender", "min": 1 },
+      { "id": "Patient.birthDate", "min": 1 }
+    ]
+  }
+}
+Add gender ConceptMap for semantic translation
