@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  hapi-fhir:
+    image: hapiproject/hapi:latest
+    container_name: hapi-fhir-server
+    ports:
+      - "8080:8080"
+    volumes:
+      - hapi-data:/data/hapi
+    restart: always
+
+volumes:
+  hapi-data:
