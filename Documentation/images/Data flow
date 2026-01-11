@@ -1,1 +1,18 @@
+## Data Flow
+
+1. **Legacy data ingestion:**  
+   Legacy CSV files containing patient and clinical observations are read by the Translator.
+
+2. **Translation to FHIR:**  
+   Python script converts each CSV row into a FHIR Transaction Bundle, creating Patient and Observation resources. UUID-based internal references ensure referential integrity.
+
+3. **Semantic mapping:**  
+   The Translator uses ConceptMaps for code translation (e.g., legacy gender to FHIR gender) to preserve semantic integrity.
+
+4. **FHIR validation and storage:**  
+   Transaction Bundles are POSTed to the HAPI FHIR server. The server validates profiles (rulebook constraints) and stores the resources.
+
+5. **Query and retrieve:**  
+   Stored resources are queryable via standard FHIR REST endpoints for analytics or operational use.
+
 
